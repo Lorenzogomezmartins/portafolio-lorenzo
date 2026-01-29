@@ -93,7 +93,7 @@ body {
 .btn-github {
   display: inline-block;
   margin-top: 40px;
-  margin-bottom: 60px; /* 👈 lo separamos del footer */
+  margin-bottom: 60px;
   padding: 12px 26px;
   background-color: #38bdf8;
   color: #020617;
@@ -109,7 +109,7 @@ body {
 }
 
 /* ===============================
-   CARRUSEL (FIX DEFINITIVO)
+   CARRUSEL FUNCIONAL
 ================================= */
 #carouselPatitas {
   max-width: 1100px;
@@ -122,29 +122,21 @@ body {
   border-radius: 18px;
 }
 
-/* Altura fija para TODAS las slides
-   (NO tocar display para no romper Bootstrap) */
+/* ===============================
+   IMPORTANTE: no usar flex ni altura fija
+   para que Bootstrap mueva todas las imágenes
+================================= */
 #carouselPatitas .carousel-item {
-  height: 520px;
   text-align: center;
 }
 
-/* Truco para centrar verticalmente sin flex */
-#carouselPatitas .carousel-item::before {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
-}
-
-/* Todas las imágenes iguales */
-#carouselPatitas img {
+#carouselPatitas .carousel-item img {
   max-width: 100%;
-  max-height: 100%;
-  object-fit: contain; /* no deforma, no estira */
-  vertical-align: middle;
-  background-color: #020617;
+  height: auto;
+  object-fit: contain;
   border-radius: 12px;
+  display: inline-block;
+  margin: 0 auto;
 }
 
 /* ===============================
@@ -169,158 +161,41 @@ body {
   color: #f8fafc;
   text-align: center;
   padding: 20px 0;
-  margin-top: 0;
 }
+
 /* ===============================
-   RESPONSIVE PATITASFELICES
+   RESPONSIVE
 ================================= */
 @media (max-width: 900px) {
+  .project-header h3 { font-size: 1.6rem; }
+  .project-header p { font-size: 0.9rem; }
+  .project-header nav a.back-link { font-size: 0.9rem; }
 
-  /* HEADER */
-  .project-header h3 {
-    font-size: 1.6rem;
-  }
-  .project-header p {
-    font-size: 0.9rem;
-  }
-  .project-header nav a.back-link {
-    font-size: 0.9rem;
-  }
+  #carouselPatitas { width: 100%; margin: 20px auto; }
+  #carouselPatitas .carousel-inner { padding: 20px; }
 
-  /* CARRUSEL PATITAS */
-  #carouselPatitas {
-    width: 100%;
-    margin: 20px auto;
-    max-width: 1100px;
-  }
+  #carouselPatitas .carousel-item img { max-height: 500px; }
 
-  #carouselPatitas .carousel-inner {
-    padding: 24px;
-    border-radius: 18px;
-    background-color: #020617;
-  }
-
-  #carouselPatitas .carousel-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 300px; /* altura mínima para tablets */
-    text-align: center;
-  }
-
-  #carouselPatitas .carousel-item img {
-    max-width: 100%;       /* no se desborda del contenedor */
-    max-height: 500px;     /* altura máxima para tablets */
-    width: auto;           /* mantiene proporción */
-    height: auto;
-    object-fit: contain;
-    border-radius: 12px;
-    display: block;
-    margin: 0 auto;
-  }
-
-  /* CONTENIDO */
-  main.project-content {
-    padding: 20px 15px;
-  }
-
-  main.project-content h2 {
-    font-size: 1.5rem;
-    margin-top: 25px;
-  }
-
-  .project-description {
-    font-size: 0.95rem;
-  }
-
-  /* TECH TAGS */
-  .tech-tags {
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-
-  .tech {
-    font-size: 13px;
-    padding: 5px 10px;
-  }
-
-  /* LISTAS */
-  main.project-content ul {
-    padding-left: 15px;
-    font-size: 0.95rem;
-  }
-
-  /* BLOQUE DE CÓDIGO */
-  pre.project-structure {
-    font-size: 0.8rem;
-    overflow-x: auto;
-  }
-
-  /* BOTÓN GITHUB */
-  .btn-github {
-    font-size: 0.9rem;
-    padding: 10px 18px;
-  }
+  main.project-content { padding: 20px 15px; }
+  main.project-content h2 { font-size: 1.5rem; margin-top: 25px; }
+  .project-description { font-size: 0.95rem; }
+  .tech-tags { flex-wrap: wrap; gap: 8px; }
+  .tech { font-size: 13px; padding: 5px 10px; }
+  main.project-content ul { font-size: 0.95rem; padding-left: 15px; }
+  pre.project-structure { font-size: 0.8rem; }
+  .btn-github { font-size: 0.9rem; padding: 10px 18px; }
 }
 
-
-/* ===============================
-   RESPONSIVE: MÓVILES PEQUEÑOS / <=500px
-================================= */
 @media (max-width: 500px) {
+  .project-header h3 { font-size: 1.3rem; }
+  .project-header p { font-size: 0.8rem; }
 
-  /* HEADER */
-  .project-header h3 {
-    font-size: 1.3rem;
-  }
-  .project-header p {
-    font-size: 0.8rem;
-  }
+  #carouselPatitas .carousel-item img { max-height: 300px; }
 
-  /* CARRUSEL PATITAS */
-  #carouselPatitas .carousel-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    min-height: 220px; /* altura mínima en móviles */
-  }
-
-  #carouselPatitas .carousel-item img {
-    max-width: 100%;
-    max-height: 300px; /* altura máxima en móviles */
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    border-radius: 12px;
-    display: block;
-    margin: 0 auto;
-  }
-
-  /* CONTENIDO */
-  main.project-content h2 {
-    font-size: 1.2rem;
-  }
-
+  main.project-content h2 { font-size: 1.2rem; }
   .project-description,
-  main.project-content ul {
-    font-size: 0.85rem;
-  }
-
-  /* TECH TAGS */
-  .tech {
-    font-size: 12px;
-    padding: 4px 8px;
-  }
-
-  /* BOTÓN GITHUB */
-  .btn-github {
-    font-size: 0.85rem;
-    padding: 8px 14px;
-  }
-
-  /* BLOQUE DE CÓDIGO */
-  pre.project-structure {
-    font-size: 0.7rem;
-  }
+  main.project-content ul { font-size: 0.85rem; }
+  .tech { font-size: 12px; padding: 4px 8px; }
+  .btn-github { font-size: 0.85rem; padding: 8px 14px; }
+  pre.project-structure { font-size: 0.7rem; }
 }
