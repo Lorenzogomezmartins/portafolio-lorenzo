@@ -200,23 +200,20 @@ body {
     background-color: #020617;
   }
 
-  /* Cada slide se adapta automáticamente */
+  /* Cada slide se adapta al contenido y se centra */
   #carouselPatitas .carousel-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: block;       /* no usar flex, altura dinámica */
     text-align: center;
-    height: auto;              /* altura automática */
   }
 
   /* Imágenes proporcionales y centradas */
   #carouselPatitas img {
-    width: 100%;              /* ocupa todo el ancho disponible */
-    max-width: 100%;          /* no se desborde */
-    aspect-ratio: 16/9;       /* mantiene proporción típica de pantalla */
-    object-fit: contain;      
+    width: 100%;          /* ocupa todo el ancho disponible */
+    height: auto;         /* altura proporcional */
+    max-height: 600px;    /* límite máximo de altura */
+    object-fit: contain;  
     border-radius: 12px;
-    display: block;
+    display: inline-block;
     margin: 0 auto;
   }
 
@@ -239,6 +236,7 @@ body {
     flex-wrap: wrap;
     gap: 8px;
   }
+
   .tech {
     font-size: 13px;
     padding: 5px 10px;
@@ -263,6 +261,9 @@ body {
   }
 }
 
+/* ===============================
+   RESPONSIVE: MÓVILES PEQUEÑOS (<=500px)
+================================= */
 @media (max-width: 500px) {
 
   /* HEADER */
@@ -275,10 +276,10 @@ body {
 
   /* CARRUSEL PATITAS */
   #carouselPatitas img {
-    width: 100%;             
-    max-width: 100%;         
-    aspect-ratio: 16/9;      
-    object-fit: contain;     
+    width: 100%;          
+    height: auto;         
+    max-height: 350px;    /* altura menor en móviles */
+    object-fit: contain;  
     border-radius: 12px;
   }
 
@@ -309,4 +310,3 @@ body {
     font-size: 0.7rem;
   }
 }
-
