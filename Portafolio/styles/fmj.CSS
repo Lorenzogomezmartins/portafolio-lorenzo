@@ -197,3 +197,93 @@ main.project-content {
   text-align: center;
   padding: 20px 0;
 }
+
+/* ===============================
+   RESPONSIVE FMJ
+================================= */
+
+/* Para tablets y móviles (<=900px) */
+@media (max-width: 900px) {
+
+  /* HEADER */
+  .project-header h3 {
+    font-size: 1.6rem;
+  }
+  .project-header p {
+    font-size: 0.9rem;
+  }
+  .project-header nav a.back-link {
+    font-size: 0.9rem;
+  }
+
+  /* CARRUSEL */
+  #carouselFMJ {
+    width: 100%;
+    max-width: 100%;
+    margin: 20px auto;
+  }
+  #carouselFMJ .carousel-item img {
+    max-height: 300px;
+    width: auto;
+    object-fit: contain;
+    border-radius: 12px;
+  }
+
+  /* CONTENIDO */
+  main.project-content {
+    padding: 20px 15px;
+  }
+
+  main.project-content h2 {
+    font-size: 1.5rem;
+    margin-top: 30px;
+  }
+
+  .project-description {
+    font-size: 0.95rem;
+  }
+
+  /* TECH TAGS */
+  .tech-tags {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .tech {
+    font-size: 13px;
+    padding: 5px 10px;
+  }
+
+  /* LISTAS */
+  main.project-content ul {
+    padding-left: 15px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Para móviles muy pequeños (<=500px) */
+@media (max-width: 500px) {
+  .project-header h3 {
+    font-size: 1.3rem;
+  }
+  .project-header p {
+    font-size: 0.8rem;
+  }
+
+  main.project-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .project-description,
+  main.project-content ul {
+    font-size: 0.85rem;
+  }
+
+  .tech {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  #carouselFMJ .carousel-item img {
+    max-height: 220px;
+  }
+}
