@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>PatitasFelices · Portfolio | Lorenzo Gómez Martins</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap CSS (para carrusel) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a2e0e6ad59.js" crossorigin="anonymous"></script>
+
+  <!-- CSS propio -->
+  <link rel="stylesheet" href="../styles/PatitasFelices.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="project-header">
+    <nav>
+      <a href="../index.html" class="back-link">&larr; Volver a Portfolio</a>
+    </nav>
+    <h3>PatitasFelices · Trabajo Integrador Final</h3>
+    <p>UTN Avellaneda · Año 2025</p>
+  </header>
+
+  <!-- CARRUSEL -->
+  <div id="carouselPatitas" class="carousel slide mb-4" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+      <div class="carousel-item active">
+        <img src="../assets/Proyectos/PatitasFelices/Login.png" class="carousel-img" alt="Pantalla de Login">
+      </div>
+
+      <div class="carousel-item">
+        <img src="../assets/Proyectos/PatitasFelices/Administrador.webp" class="carousel-img" alt="Panel de Administración">
+      </div>
+
+      <div class="carousel-item">
+        <img src="../assets/Proyectos/PatitasFelices/Ticket.webp" class="carousel-img" alt="Ticket de compra">
+      </div>
+
+      <div class="carousel-item">
+        <img src="../assets/Proyectos/PatitasFelices/Blanco y negro.webp" class="carousel-img" alt="Vista alternativa">
+      </div>
+
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselPatitas" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselPatitas" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+  <!-- CONTENIDO -->
+  <main class="project-content container">
+
+    <h2>Descripción General</h2>
+    <p class="project-description">
+      PatitasFelices es una plataforma web full stack diseñada para facilitar la compra de alimentos,
+      juguetes y accesorios para mascotas. Los usuarios pueden filtrar productos, gestionar un carrito
+      de compras y recibir un ticket digital con el detalle de la operación.
+      Administradores y superadministradores cuentan con un panel seguro para la gestión completa del sistema.
+    </p>
+
+    <h2>Tecnologías Utilizadas</h2>
+    <div class="tech-tags">
+      <div class="tech"><i class="fa-brands fa-html5"></i> HTML</div>
+      <div class="tech"><i class="fa-brands fa-css3-alt"></i> CSS</div>
+      <div class="tech"><i class="fa-brands fa-js"></i> JavaScript</div>
+      <div class="tech"><i class="fa-brands fa-node-js"></i> Node.js</div>
+      <div class="tech"><i class="fa-solid fa-database"></i> MongoDB</div>
+      <div class="tech"><i class="fa-brands fa-bootstrap"></i> Bootstrap</div>
+      <div class="tech"><i class="fa-solid fa-shield-halved"></i> Bcrypt / JWT</div>
+      <div class="tech"><i class="fa-solid fa-upload"></i> Multer</div>
+      <div class="tech"><i class="fa-solid fa-check"></i> Joi</div>
+    </div>
+
+    <h2>Flujo del Usuario</h2>
+    <ul>
+      <li><strong>Cliente:</strong> login, filtrado de productos, carrito, confirmación y ticket digital.</li>
+      <li><strong>Administrador:</strong> autenticación segura, CRUD de productos y usuarios, estadísticas.</li>
+      <li><strong>Superadministrador:</strong> gestión completa de administradores y control del sistema.</li>
+    </ul>
+
+    <h2>Qué Construí</h2>
+    <ul>
+      <li>Interfaz web responsiva con modo oscuro y claro persistente.</li>
+      <li>Panel de administración con control de accesos por roles.</li>
+      <li>CRUD completo de productos y usuarios con validaciones.</li>
+      <li>Carga de imágenes mediante Multer.</li>
+      <li>Ticket digital con cálculo automático de precios.</li>
+    </ul>
+
+    <h2>Estructura del Proyecto</h2>
+    <p>
+      Organización del proyecto con separación clara entre frontend y backend,
+      siguiendo una arquitectura modular orientada a escalabilidad y mantenimiento.
+    </p>
+
+    <pre class="project-structure"><code>
+mi-proyecto/
+├── backend/
+│   ├── node_modules/
+│   ├── src/
+│   │   ├── config/
+│   │   ├── controllers/
+│   │   ├── middlewares/
+│   │   ├── models/
+│   │   ├── resources/
+│   │   └── routes/
+│   ├── uploads/
+│   └── server.js
+│
+├── frontend/
+│   ├── imagenes/
+│   ├── pages/
+│   ├── scripts/
+│   └── styles/
+│
+├── .gitignore
+└── README.md
+    </code></pre>
+
+    <h2>Qué Demuestra Este Proyecto</h2>
+    <ul>
+      <li>Capacidad para desarrollar aplicaciones web full stack reales.</li>
+      <li>Buen manejo de JavaScript, Node.js y MongoDB.</li>
+      <li>Diseño de interfaces enfocadas en usabilidad.</li>
+      <li>Implementación de seguridad y control de roles.</li>
+    </ul>
+
+    <a href="https://github.com/Lorenzogomezmartins/PatitasFelices_ProgramacionIII"
+      class="btn-github"
+      target="_blank">
+      Ver en GitHub &rarr;
+    </a>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2026 · Lorenzo Gómez Martins</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

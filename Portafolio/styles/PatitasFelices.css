@@ -1,0 +1,173 @@
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+  background-color: #020617;
+  color: #f8fafc;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===============================
+   HEADER
+================================= */
+.project-header {
+  background-color: #0f172a;
+  padding: 24px 20px;
+  text-align: center;
+}
+
+.project-header h3 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.project-header p {
+  margin: 6px 0 0;
+  color: #94a3b8;
+}
+
+.project-header nav a.back-link {
+  color: #38bdf8;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+/* ===============================
+   CONTENIDO
+================================= */
+.project-content {
+  padding-top: 30px;
+}
+
+.project-content h2 {
+  font-size: 2rem;
+  color: #38bdf8;
+  margin: 40px 0 15px;
+}
+
+.project-description {
+  line-height: 1.6;
+  color: #94a3b8;
+  margin-bottom: 20px;
+}
+
+/* ===============================
+   LISTAS
+================================= */
+.project-content ul {
+  padding-left: 18px;
+  margin-bottom: 20px;
+}
+
+.project-content li {
+  margin-bottom: 8px;
+  color: #e5e7eb;
+}
+
+/* ===============================
+   TECNOLOGÍAS
+================================= */
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.tech {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #1e293b;
+  color: #f8fafc;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+
+/* ===============================
+   BOTÓN GITHUB
+================================= */
+.btn-github {
+  display: inline-block;
+  margin-top: 40px;
+  margin-bottom: 60px; /* 👈 lo separamos del footer */
+  padding: 12px 26px;
+  background-color: #38bdf8;
+  color: #020617;
+  font-weight: 600;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-github:hover {
+  background-color: #22d3ee;
+  transform: translateY(-2px);
+}
+
+/* ===============================
+   CARRUSEL (FIX DEFINITIVO)
+================================= */
+#carouselPatitas {
+  max-width: 1100px;
+  margin: 30px auto 0;
+}
+
+.carousel-inner {
+  background-color: #020617;
+  padding: 24px;
+  border-radius: 18px;
+}
+
+/* Altura fija para TODAS las slides
+   (NO tocar display para no romper Bootstrap) */
+#carouselPatitas .carousel-item {
+  height: 520px;
+  text-align: center;
+}
+
+/* Truco para centrar verticalmente sin flex */
+#carouselPatitas .carousel-item::before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+/* Todas las imágenes iguales */
+#carouselPatitas img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* no deforma, no estira */
+  vertical-align: middle;
+  background-color: #020617;
+  border-radius: 12px;
+}
+
+/* ===============================
+   BLOQUE CÓDIGO
+================================= */
+.project-structure {
+  background-color: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  padding: 20px;
+  color: #e5e7eb;
+  font-size: 14px;
+  overflow-x: auto;
+  margin-bottom: 30px;
+}
+
+/* ===============================
+   FOOTER
+================================= */
+.footer {
+  background-color: #0f172a;
+  color: #f8fafc;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 0;
+}
