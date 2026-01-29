@@ -1043,352 +1043,191 @@ footer::selection {
    RESPONSIVE OPTIMIZADO
 ================================= */
 
-/* NAV */
-nav {
-  padding: 15px 10px; /* más cercano a la parte superior */
-}
+/* Para tablets y móviles medianos (<=900px) */
+@media (max-width: 900px) {
 
-nav ul {
-  flex-direction: column;
-  gap: 10px;
-  text-align: center;
-  padding: 0;
-}
-
-nav ul li {
-  margin: 0;
-}
-
-/* HERO */
-.hero {
-  padding: 50px 15px 30px 15px; /* padding superior e inferior balanceado */
-  position: relative;
-}
-
-.hero-content {
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 20px;
-}
-
-.hero-photo img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.hero-text h1 {
-  font-size: 1.6rem;
-  margin: 10px 0 5px 0;
-}
-
-.hero-text h2 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-
-.hero-text p {
-  font-size: 0.95rem;
-  line-height: 1.5;
-  padding: 0 10px;
-}
-
-/* FLOATING ICONS */
-.floating-icons {
-  position: absolute;
-  top: 10px; /* un poco más arriba */
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 8px;
-  font-size: 1.1rem;
-  opacity: 0.8;
-}
-
-/* SECCIONES */
-.section h3, .section .section-title {
-  font-size: 1.3rem;
-  text-align: center;
-  margin-bottom: 15px;
-}
-
-/* =========================
-   PROYECTOS
-========================= */
-.projects-grid {
-  display: grid;
-  grid-template-columns: 1fr; /* apiladas en tablet */
-  gap: 20px;
-}
-
-.project-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: linear-gradient(145deg, #0f172a, #020617);
-  padding: 25px;
-  border-radius: 18px;
-  border: 1px solid #1e293b;
-  text-decoration: none;
-  transition: transform 0.4s, box-shadow 0.4s;
-  color: inherit;
-}
-
-.project-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 50px rgba(56, 189, 248, 0.15);
-}
-
-.project-card img {
-  width: 100%;
-  max-height: 300px;
-  object-fit: cover;
-  border-radius: 16px;
-  margin-bottom: 15px;
-}
-
-.project-card h4 {
-  font-size: 1.3rem;
-  color: #f8fafc;
-  text-align: center;
-}
-
-.project-card p {
-  margin: 12px 0;
-  color: #94a3b8;
-  text-align: center;
-}
-
-.project-card .tech-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  justify-content: center;
-}
-
-.project-card .tech {
-  background-color: #1e293b;
-  padding: 5px 10px;
-  border-radius: 12px;
-  font-size: 0.8rem;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  color: #38bdf8;
-}
-
-/* =======================
-   CARRUSEL
-======================= */
-#carouselPatitas {
-  width: 100%;
-  max-width: 100%;
-  margin: 15px auto;
-}
-
-#carouselPatitas .carousel-inner {
-  width: 100%;
-}
-
-#carouselPatitas .carousel-item {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-
-#carouselPatitas .carousel-item img {
-  width: 90%;
-  max-width: 500px;
-  height: auto;
-  max-height: 400px;
-  object-fit: contain;
-  border-radius: 12px;
-  display: block;
-  margin: 0 auto;
-}
-
-/* =======================
-   HABILIDADES
-======================= */
-.skills-wrapper {
-  flex-direction: column;
-  gap: 20px;
-  align-items: stretch;
-}
-
-.skills-card {
-  width: 100%;
-  padding: 15px;
-  border-radius: 10px;
-  background-color: #f9f9f9;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-}
-
-.skills-card ul.skills-list {
-  padding-left: 20px;
-  margin-top: 10px;
-}
-
-/* =======================
-   SOBRE MI
-======================= */
-.about-box {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: center;
-}
-
-.about-left {
-  flex: 0 0 35%;
-  max-width: 35%;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  align-items: flex-start;
-  text-align: left;
-}
-
-.about-left .github-logo {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  color: #333;
-}
-
-.about-highlights, .work-list {
-  list-style: disc;
-  padding-left: 20px;
-  margin: 0;
-}
-
-.about-right {
-  flex: 0 0 60%;
-  max-width: 60%;
-  text-align: justify;
-}
-
-.about-right p {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin-bottom: 12px;
-}
-
-.about-cta {
-  text-align: left;
-  margin-top: 15px;
-}
-
-/* =======================
-   EXPERIENCIA & EDUCACION
-======================= */
-.trayectoria-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.trayectoria-row {
-  flex-direction: column;
-  gap: 15px;
-}
-
-.trayectoria-col {
-  width: 100%;
-}
-
-.trayectoria-card {
-  padding: 15px;
-  border-radius: 10px;
-  background-color: #f9f9f9;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-}
-
-.trayectoria-card h5 {
-  font-size: 1rem;
-  margin-bottom: 5px;
-}
-
-.trayectoria-card p {
-  font-size: 0.9rem;
-  line-height: 1.5;
-  margin-top: 5px;
-}
-
-/* =======================
-   SERVICIOS
-======================= */
-.services-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  align-items: center;
-}
-
-.service-card {
-  width: 100%;
-}
-
-/* =======================
-   CONTACTO
-======================= */
-.contact-wrapper {
-  flex-direction: column;
-  gap: 15px;
-  padding: 15px;
-  align-items: center;
-}
-
-.contact-left, .contact-right {
-  width: 100%;
-}
-
-.contact-left h2 {
-  font-size: 1.6rem;
-}
-
-.contact-left h3 {
-  font-size: 1rem;
-}
-
-.contact-left p {
-  font-size: 0.9rem;
-}
-
-#contact-form input,
-#contact-form textarea {
-  width: 100%;
-  font-size: 0.9rem;
-}
-
-#contact-form button {
-  font-size: 0.95rem;
-  padding: 8px 16px;
-}
-
-/* ===============================
-   MÓVILES PEQUEÑOS (<=500px)
-================================= */
-
-/* HERO */
-@media (max-width: 500px) {
-
-  .hero {
-    padding: 40px 10px 20px 10px;
+  /* NAV */
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    padding: 0;
   }
 
+  nav ul li {
+    margin: 0;
+  }
+
+  /* HERO */
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .hero-photo img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .hero-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-text h2 {
+    font-size: 1rem;
+  }
+
+  .hero-text p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    padding: 0 5px;
+  }
+
+  /* PROYECTOS */
+  .projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .project-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .project-card img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+
+  .project-card .project-content {
+    padding: 10px;
+  }
+
+  /* HABILIDADES */
+  .skills-wrapper {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .skills-card {
+    width: 100%;
+  }
+
+  .skills-card ul.skills-list {
+    padding-left: 15px;
+  }
+
+  /* SOBRE MI */
+  .about-box {
+    flex-direction: row; /* se mantiene lado a lado hasta <600px */
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: flex-start;
+  }
+
+  .about-left, .about-right {
+    width: 48%;
+  }
+
+  .about-right p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  /* EXPERIENCIA & EDUCACION */
+  .trayectoria-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .trayectoria-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .trayectoria-col {
+    width: 100%;
+  }
+
+  .trayectoria-card h5 {
+    font-size: 1rem;
+  }
+
+  .trayectoria-card p {
+    font-size: 0.9rem;
+    line-height: 1.3;
+  }
+
+  /* SERVICIOS */
+  .services-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .service-card {
+    width: 100%;
+  }
+
+  /* CONTACTO */
+  .contact-wrapper {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+    align-items: center;
+  }
+
+  .contact-left, .contact-right {
+    width: 100%;
+  }
+
+  .contact-left h2 {
+    font-size: 1.6rem;
+  }
+
+  .contact-left h3 {
+    font-size: 1rem;
+  }
+
+  .contact-left p {
+    font-size: 0.9rem;
+  }
+
+  #contact-form input,
+  #contact-form textarea {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  #contact-form button {
+    font-size: 0.95rem;
+    padding: 8px 16px;
+  }
+}
+
+/* Para móviles muy pequeños (<=500px) */
+@media (max-width: 500px) {
+
+  /* HERO */
   .hero-content {
     padding: 10px;
   }
 
   .hero-photo img {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
   }
 
   .hero-text h1 {
@@ -1396,61 +1235,28 @@ nav ul li {
   }
 
   .hero-text h2 {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 
   .hero-text p {
     font-size: 0.85rem;
-    padding: 0 5px;
+    padding: 0 3px;
   }
 
   /* PROYECTOS */
-  .projects-grid {
-    gap: 15px;
-  }
-
-  .project-card img {
-    max-height: 220px;
-  }
-
   .project-card h4 {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
   }
 
-  .project-card p {
-    font-size: 0.85rem;
-  }
-
-  .project-card .tech {
-    font-size: 0.75rem;
-    padding: 4px 8px;
+  /* HABILIDADES */
+  .skills-card h4, .section-title {
+    font-size: 1rem;
   }
 
   /* SOBRE MI */
-  .about-box {
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
-    text-align: center;
-  }
-
   .about-left, .about-right {
-    flex: 0 0 100%;
-    max-width: 100%;
-    align-items: center;
-  }
-
-  .about-right p {
-    font-size: 0.9rem;
-    line-height: 1.5;
-  }
-
-  .about-left .github-logo {
-    font-size: 1.8rem;
-  }
-
-  .about-cta {
-    text-align: center;
+    width: 100%;
+    flex-direction: column;
   }
 
   /* EXPERIENCIA & EDUCACION */
