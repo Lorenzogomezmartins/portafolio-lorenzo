@@ -188,7 +188,7 @@ body {
     font-size: 0.9rem;
   }
 
-  /* CARRUSEL */
+  /* CARRUSEL PATITAS */
   #carouselPatitas {
     width: 100%;
     max-width: 100%;
@@ -200,10 +200,10 @@ body {
   }
 
   #carouselPatitas .carousel-item img {
-    width: 100%;
-    height: auto;         
-    max-height: 400px;    
-    object-fit: contain;   
+    width: auto;            /* deja que la imagen se ajuste */
+    max-width: 100%;        /* no se desborde del contenedor */
+    max-height: 300px;      /* altura máxima en tablets */
+    object-fit: contain;    
     border-radius: 12px;
     display: block;
     margin: 0 auto;
@@ -228,6 +228,7 @@ body {
     flex-wrap: wrap;
     gap: 8px;
   }
+
   .tech {
     font-size: 13px;
     padding: 5px 10px;
@@ -265,9 +266,11 @@ body {
     font-size: 0.8rem;
   }
 
-  /* CARRUSEL */
+  /* CARRUSEL PATITAS */
   #carouselPatitas .carousel-item img {
-    max-height: 220px;
+    max-height: 220px;       /* altura menor en móviles */
+    width: auto;
+    max-width: 100%;
   }
 
   /* CONTENIDO */
@@ -292,7 +295,7 @@ body {
     padding: 8px 14px;
   }
 
-  /* PRE (estructura de proyecto) */
+  /* PRE */
   pre.project-structure {
     font-size: 0.7rem;
   }
