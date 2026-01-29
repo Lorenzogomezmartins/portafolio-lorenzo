@@ -1040,16 +1040,16 @@ footer::selection {
 
 
 /* ===============================
-   RESPONSIVE
+   RESPONSIVE OPTIMIZADO
 ================================= */
 
-/* Para móviles y tablets (<=900px) */
+/* Para tablets y móviles medianos (<=900px) */
 @media (max-width: 900px) {
 
   /* NAV */
   nav ul {
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
     text-align: center;
     padding: 0;
   }
@@ -1068,18 +1068,18 @@ footer::selection {
   }
 
   .hero-photo img {
-    width: 140px;
-    height: 140px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     object-fit: cover;
   }
 
   .hero-text h1 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 
   .hero-text h2 {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .hero-text p {
@@ -1103,7 +1103,7 @@ footer::selection {
 
   .project-card img {
     width: 100%;
-    max-height: 220px;
+    max-height: 200px;
     object-fit: cover;
     margin-bottom: 10px;
   }
@@ -1116,7 +1116,7 @@ footer::selection {
   .skills-wrapper {
     flex-direction: column;
     gap: 15px;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .skills-card {
@@ -1129,13 +1129,14 @@ footer::selection {
 
   /* SOBRE MI */
   .about-box {
-    flex-direction: column;
+    flex-direction: row; /* se mantiene lado a lado hasta <600px */
+    flex-wrap: wrap;
     gap: 15px;
     align-items: flex-start;
   }
 
   .about-left, .about-right {
-    width: 100%;
+    width: 48%;
   }
 
   .about-right p {
@@ -1173,7 +1174,7 @@ footer::selection {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .service-card {
@@ -1185,7 +1186,7 @@ footer::selection {
     flex-direction: column;
     gap: 15px;
     padding: 15px;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .contact-left, .contact-right {
@@ -1193,7 +1194,7 @@ footer::selection {
   }
 
   .contact-left h2 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 
   .contact-left h3 {
@@ -1218,37 +1219,62 @@ footer::selection {
 
 /* Para móviles muy pequeños (<=500px) */
 @media (max-width: 500px) {
+
+  /* HERO */
+  .hero-content {
+    padding: 10px;
+  }
+
+  .hero-photo img {
+    width: 100px;
+    height: 100px;
+  }
+
   .hero-text h1 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 
   .hero-text h2 {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
+  .hero-text p {
+    font-size: 0.85rem;
+    padding: 0 3px;
+  }
+
+  /* PROYECTOS */
   .project-card h4 {
+    font-size: 0.95rem;
+  }
+
+  /* HABILIDADES */
+  .skills-card h4, .section-title {
     font-size: 1rem;
   }
 
-  .skills-card h4, .section-title {
-    font-size: 1.1rem;
+  /* SOBRE MI */
+  .about-left, .about-right {
+    width: 100%;
+    flex-direction: column;
   }
 
+  /* EXPERIENCIA & EDUCACION */
   .trayectoria-card h5 {
     font-size: 0.95rem;
   }
 
-  .trayectoria-card p,
-  .hero-text p {
+  .trayectoria-card p {
     font-size: 0.85rem;
   }
 
+  /* CONTACTO */
   .contact-left h2 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 
   .contact-left h3 {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 
   .contact-left p {
@@ -1265,4 +1291,3 @@ footer::selection {
     padding: 6px 12px;
   }
 }
-
