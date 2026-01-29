@@ -1064,22 +1064,24 @@ footer::selection {
     align-items: center;
     text-align: center;
     gap: 15px;
-    padding: 15px;
+    padding: 20px 10px; /* un poco más de espacio */
   }
 
   .hero-photo img {
-    width: 120px;
-    height: 120px;
+    width: 100px;   /* más pequeño */
+    height: 100px;  /* mantiene proporción */
     border-radius: 50%;
     object-fit: cover;
   }
 
   .hero-text h1 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;  /* reducido */
+    margin: 10px 0 5px 0;
   }
 
   .hero-text h2 {
     font-size: 1rem;
+    margin-bottom: 10px;
   }
 
   .hero-text p {
@@ -1087,6 +1089,44 @@ footer::selection {
     line-height: 1.4;
     padding: 0 5px;
   }
+
+  /* Floating icons */
+  .floating-icons i {
+    font-size: 1.2rem; /* más pequeño para que no tape */
+    margin: 5px;
+  }
+
+  /* Secciones */
+  .section h3, .section .section-title {
+    font-size: 1.3rem;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .projects-grid,
+  .skills-wrapper,
+  .trayectoria-grid,
+  .services-grid {
+    grid-template-columns: 1fr; /* todo en columna */
+    gap: 15px;
+  }
+
+  .about-box {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .about-left, .about-right {
+    width: 100%;
+  }
+
+  .contact-wrapper {
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+  }
+}
 
   /* PROYECTOS */
   .projects-grid {
@@ -1112,62 +1152,106 @@ footer::selection {
     padding: 10px;
   }
 
-  /* HABILIDADES */
-  .skills-wrapper {
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
-  }
+  /* =====================
+   HABILIDADES
+===================== */
+.skills-wrapper {
+  flex-direction: column; /* apilamos las cards */
+  gap: 20px;
+  align-items: stretch; /* ocupan todo el ancho */
+}
 
-  .skills-card {
-    width: 100%;
-  }
+.skills-card {
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px; /* bordes suaves */
+  background-color: #f9f9f9; /* color de fondo claro */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08); /* sombra ligera */
+}
 
-  .skills-card ul.skills-list {
-    padding-left: 15px;
-  }
+.skills-card ul.skills-list {
+  padding-left: 20px;
+  margin-top: 10px;
+}
 
-  /* SOBRE MI */
-  .about-box {
-    flex-direction: row; /* se mantiene lado a lado hasta <600px */
-    flex-wrap: wrap;
-    gap: 15px;
-    align-items: flex-start;
-  }
+/* =====================
+   SOBRE MI
+===================== */
+.about-box {
+  flex-direction: column; /* apilado en móvil */
+  gap: 20px;
+  align-items: center;
+  text-align: center;
+}
 
-  .about-left, .about-right {
-    width: 48%;
-  }
+.about-left, .about-right {
+  width: 100%; /* full width */
+}
 
-  .about-right p {
-    font-size: 0.95rem;
-    line-height: 1.4;
-  }
+.about-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
 
-  /* EXPERIENCIA & EDUCACION */
-  .trayectoria-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
+.about-left .github-logo {
+  font-size: 2.2rem;
+  color: #333;
+}
 
-  .trayectoria-row {
-    flex-direction: column;
-    gap: 10px;
-  }
+.about-highlights, .work-list {
+  list-style: none;
+  padding-left: 0;
+}
 
-  .trayectoria-col {
-    width: 100%;
-  }
+.about-right p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
 
-  .trayectoria-card h5 {
-    font-size: 1rem;
-  }
+.about-cta {
+  text-align: center;
+  margin-top: 15px;
+}
 
-  .trayectoria-card p {
-    font-size: 0.9rem;
-    line-height: 1.3;
-  }
+/* =====================
+   EXPERIENCIA & EDUCACION
+===================== */
+.trayectoria-grid {
+  display: flex;
+  flex-direction: column; /* todo apilado */
+  gap: 20px;
+}
+
+.trayectoria-row {
+  flex-direction: column;
+  gap: 15px;
+}
+
+.trayectoria-col {
+  width: 100%;
+}
+
+.trayectoria-card {
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.trayectoria-card h5 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.trayectoria-card p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-top: 5px;
+}
+
 
   /* SERVICIOS */
   .services-grid {
@@ -1215,7 +1299,7 @@ footer::selection {
     font-size: 0.95rem;
     padding: 8px 16px;
   }
-}
+
 
 /* Para móviles muy pequeños (<=500px) */
 @media (max-width: 500px) {
