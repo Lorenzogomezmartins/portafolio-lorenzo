@@ -175,148 +175,125 @@ body {
    RESPONSIVE PATITASFELICES
 ================================= */
 
-/* HEADER */
-.project-header h3 {
-  font-size: 1.5rem;
-  margin-bottom: 8px;
-}
-.project-header p {
-  font-size: 0.9rem;
-  margin-bottom: 12px;
-}
-.project-header nav a.back-link {
-  font-size: 0.9rem;
-}
+@media (max-width: 900px) {
 
-/* CARRUSEL */
-#carouselPatitas {
-  width: 100%;
-  max-width: 100%;
-  margin: 15px auto;
-}
+  /* HEADER */
+  .project-header h3 {
+    font-size: 1.6rem;
+  }
+  .project-header p {
+    font-size: 0.9rem;
+  }
+  .project-header nav a.back-link {
+    font-size: 0.9rem;
+  }
 
-#carouselPatitas .carousel-inner {
-  width: 100%;
-}
+  /* CARRUSEL */
+  #carouselPatitas {
+    width: 100%;
+    max-width: 100%;
+    margin: 20px auto;
+  }
 
-#carouselPatitas .carousel-item {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
+  #carouselPatitas .carousel-item {
+    text-align: center;
+  }
 
-#carouselPatitas .carousel-item img {
-  width: 90%;
-  max-width: 500px;
-  height: auto;
-  max-height: 400px;
-  object-fit: contain;
-  border-radius: 12px;
-  display: block;
-  margin: 0 auto;
-  transition: transform 0.5s ease; /* suaviza animación de slide */
-}
+  #carouselPatitas .carousel-item img {
+    width: 100%;
+    height: auto;         
+    max-height: 400px;    
+    object-fit: contain;   
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto;
+  }
 
-/* CONTENIDO */
-main.project-content {
-  padding: 20px 15px;
-}
+  /* CONTENIDO */
+  main.project-content {
+    padding: 20px 15px;
+  }
 
-main.project-content h2 {
-  font-size: 1.4rem;
-  margin-top: 20px;
-}
+  main.project-content h2 {
+    font-size: 1.5rem;
+    margin-top: 25px;
+  }
 
-.project-description {
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
+  .project-description {
+    font-size: 0.95rem;
+  }
 
-/* TECH TAGS */
-.tech-tags {
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 10px;
-}
-.tech {
-  font-size: 13px;
-  padding: 5px 10px;
-}
+  /* TECH TAGS */
+  .tech-tags {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .tech {
+    font-size: 13px;
+    padding: 5px 10px;
+  }
 
-/* LISTAS */
-main.project-content ul {
-  padding-left: 15px;
-  font-size: 0.95rem;
-}
+  /* LISTAS */
+  main.project-content ul {
+    padding-left: 15px;
+    font-size: 0.95rem;
+  }
 
-/* PRE (estructura de proyecto) */
-pre.project-structure {
-  font-size: 0.8rem;
-  overflow-x: auto;
-  padding: 10px;
-  border-radius: 8px;
-  background-color: #f5f5f5;
-}
+  /* PRE (estructura de proyecto) */
+  pre.project-structure {
+    font-size: 0.8rem;
+    overflow-x: auto;
+  }
 
-/* BOTÓN GITHUB */
-.btn-github {
-  font-size: 0.9rem;
-  padding: 10px 18px;
-  margin-top: 10px;
+  /* BOTÓN GITHUB */
+  .btn-github {
+    font-size: 0.9rem;
+    padding: 10px 18px;
+  }
 }
 
 /* ===============================
    MÓVILES PEQUEÑOS (<=500px)
 ================================= */
+@media (max-width: 500px) {
 
-/* HEADER */
-.project-header h3 {
-  font-size: 1.3rem;
-  margin-bottom: 6px;
-}
-.project-header p {
-  font-size: 0.8rem;
-  margin-bottom: 10px;
-}
+  /* HEADER */
+  .project-header h3 {
+    font-size: 1.3rem;
+  }
+  .project-header p {
+    font-size: 0.8rem;
+  }
 
-/* CARRUSEL */
-#carouselPatitas .carousel-item img {
-  width: 95%;
-  max-width: 300px;
-  height: auto;
-  max-height: 220px;
-  object-fit: contain;
-  border-radius: 10px;
-  display: block;
-  margin: 0 auto;
-  transition: transform 0.5s ease;
-}
+  /* CARRUSEL */
+  #carouselPatitas .carousel-item img {
+    max-height: 220px;
+  }
 
-/* CONTENIDO */
-main.project-content h2 {
-  font-size: 1.2rem;
-  margin-top: 15px;
-}
+  /* CONTENIDO */
+  main.project-content h2 {
+    font-size: 1.2rem;
+  }
 
-.project-description,
-main.project-content ul {
-  font-size: 0.85rem;
-  line-height: 1.4;
-}
+  .project-description,
+  main.project-content ul {
+    font-size: 0.85rem;
+  }
 
-/* TECH TAGS */
-.tech {
-  font-size: 12px;
-  padding: 4px 8px;
-}
+  /* TECH TAGS */
+  .tech {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
 
-/* BOTÓN GITHUB */
-.btn-github {
-  font-size: 0.85rem;
-  padding: 8px 14px;
-}
+  /* BOTÓN GITHUB */
+  .btn-github {
+    font-size: 0.85rem;
+    padding: 8px 14px;
+  }
 
-/* PRE (estructura de proyecto) */
-pre.project-structure {
-  font-size: 0.7rem;
+  /* PRE (estructura de proyecto) */
+  pre.project-structure {
+    font-size: 0.7rem;
+  }
 }
