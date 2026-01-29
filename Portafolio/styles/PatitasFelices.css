@@ -200,20 +200,24 @@ body {
     background-color: #020617;
   }
 
-  /* Cada slide se adapta al contenido y se centra */
+  /* Cada slide se adapta automáticamente y centra la imagen */
   #carouselPatitas .carousel-item {
-    display: block;       /* no usar flex, altura dinámica */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px; /* altura mínima para tablets */
     text-align: center;
   }
 
-  /* Imágenes proporcionales y centradas */
-  #carouselPatitas img {
-    width: 100%;          /* ocupa todo el ancho disponible */
-    height: auto;         /* altura proporcional */
-    max-height: 600px;    /* límite máximo de altura */
-    object-fit: contain;  
+  /* Imagen adaptable y centrada */
+  #carouselPatitas .carousel-item img {
+    max-width: 100%;       /* no se desborda del contenedor */
+    max-height: 500px;     /* altura máxima para tablets */
+    width: auto;           /* mantiene proporción */
+    height: auto;
+    object-fit: contain;
     border-radius: 12px;
-    display: inline-block;
+    display: block;
     margin: 0 auto;
   }
 
@@ -275,12 +279,23 @@ body {
   }
 
   /* CARRUSEL PATITAS */
-  #carouselPatitas img {
-    width: 100%;          
-    height: auto;         
-    max-height: 350px;    /* altura menor en móviles */
-    object-fit: contain;  
+  #carouselPatitas .carousel-item {
+    min-height: 220px; /* altura mínima en móviles */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  #carouselPatitas .carousel-item img {
+    max-width: 100%;
+    max-height: 300px; /* altura máxima en móviles */
+    width: auto;
+    height: auto;
+    object-fit: contain;
     border-radius: 12px;
+    display: block;
+    margin: 0 auto;
   }
 
   /* CONTENIDO */
