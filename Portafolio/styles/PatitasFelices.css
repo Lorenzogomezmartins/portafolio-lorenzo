@@ -191,7 +191,6 @@ body {
   /* CARRUSEL PATITAS */
   #carouselPatitas {
     width: 100%;
-    max-width: 100%;
     margin: 20px auto;
   }
 
@@ -200,10 +199,9 @@ body {
   }
 
   #carouselPatitas .carousel-item img {
-    width: auto;            /* deja que la imagen se ajuste */
-    max-width: 100%;        /* no se desborde del contenedor */
-    max-height: 300px;      /* altura máxima en tablets */
-    object-fit: contain;    
+    width: 100%;       /* ocupa todo el ancho del contenedor */
+    height: auto;      /* altura automática según proporción */
+    object-fit: contain;
     border-radius: 12px;
     display: block;
     margin: 0 auto;
@@ -268,9 +266,9 @@ body {
 
   /* CARRUSEL PATITAS */
   #carouselPatitas .carousel-item img {
-    max-height: 220px;       /* altura menor en móviles */
-    width: auto;
-    max-width: 100%;
+    width: 100%;       /* ocupa todo el ancho */
+    height: auto;      /* altura automática */
+    object-fit: contain;
   }
 
   /* CONTENIDO */

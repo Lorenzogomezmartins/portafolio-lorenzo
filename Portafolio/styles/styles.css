@@ -1134,14 +1134,43 @@ footer::selection {
   }
 
   /* EXPERIENCIA & EDUCACIÓN */
-  .trayectoria-row {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
+  /* Contenedor de toda la sección */
+.trayectoria-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 50px;                  
+  padding: 20px;
+}
 
-  .trayectoria-grid::before, .trayectoria-grid::after {
-    left: 10px;
-  }
+/* Títulos de cada sección */
+.trayectoria-row h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #333;
+  padding-bottom: 5px;
+}
+
+/* Cada “subgrid” para lista de experiencias o educación */
+.trayectoria-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;                  
+  position: relative;         
+  padding-left: 15px;
+}
+
+/* Opcional: líneas estilo timeline */
+.trayectoria-grid::before, 
+.trayectoria-grid::after {
+  content: '';
+  position: absolute;
+  left: 10px;       
+  width: 2px;
+  background-color: #ccc;
+  top: 0;
+  bottom: 0;
+}
 
   /* SERVICIOS */
   .services-grid {
