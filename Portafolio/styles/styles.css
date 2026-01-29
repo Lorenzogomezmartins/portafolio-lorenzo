@@ -1134,11 +1134,11 @@ footer::selection {
   }
 
   /* EXPERIENCIA & EDUCACIÓN */
-  /* Contenedor de toda la sección */
+ /* Contenedor principal de la sección */
 .trayectoria-row {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 50px;                  
+  gap: 50px;
   padding: 20px;
 }
 
@@ -1151,25 +1151,25 @@ footer::selection {
   padding-bottom: 5px;
 }
 
-/* Cada “subgrid” para lista de experiencias o educación */
+/* Subgrid para listas de experiencias o educación */
 .trayectoria-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 20px;                  
-  position: relative;         
-  padding-left: 15px;
+  gap: 20px;
+  position: relative;
+  padding-left: 25px; /* espacio para la línea del timeline */
 }
 
-/* Opcional: líneas estilo timeline */
-.trayectoria-grid::before, 
-.trayectoria-grid::after {
+/* Línea vertical del timeline */
+.trayectoria-grid::before {
   content: '';
   position: absolute;
-  left: 10px;       
-  width: 2px;
-  background-color: #ccc;
+  left: 10px;
   top: 0;
   bottom: 0;
+  width: 2px;
+  background-color: #ccc;
+  border-radius: 2px;
 }
 
   /* SERVICIOS */
