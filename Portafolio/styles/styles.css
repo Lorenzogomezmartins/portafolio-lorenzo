@@ -1043,7 +1043,6 @@ footer::selection {
    RESPONSIVE OPTIMIZADO
 ================================= */
 
-/* Para tablets y móviles medianos (<=900px) */
 @media (max-width: 900px) {
 
   /* NAV */
@@ -1059,42 +1058,55 @@ footer::selection {
   }
 
   /* HERO */
+  .hero {
+    padding: 50px 15px 30px 15px; /* padding superior e inferior balanceado */
+    position: relative;
+  }
+
   .hero-content {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 15px;
-    padding: 20px 10px; /* un poco más de espacio */
+    gap: 20px;
   }
 
   .hero-photo img {
     width: 100px;   /* más pequeño */
-    height: 100px;  /* mantiene proporción */
+    height: 100px;  
     border-radius: 50%;
     object-fit: cover;
   }
 
   .hero-text h1 {
-    font-size: 1.4rem;  /* reducido */
+    font-size: 1.6rem;  /* ajustado para tablet */
     margin: 10px 0 5px 0;
   }
 
   .hero-text h2 {
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-bottom: 10px;
   }
 
   .hero-text p {
-    font-size: 0.9rem;
-    line-height: 1.4;
-    padding: 0 5px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    padding: 0 10px;
   }
 
-  /* Floating icons */
-  .floating-icons i {
-    font-size: 1.2rem; /* más pequeño para que no tape */
-    margin: 5px;
+  /* FLOATING ICONS */
+  .floating-icons {
+    position: absolute;
+    top: 10px;       /* mover un poco hacia arriba */
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 1.1rem;
+    opacity: 0.8;
   }
+}
 
   /* Secciones */
   .section h3, .section .section-title {
@@ -1126,7 +1138,7 @@ footer::selection {
     gap: 20px;
     padding: 10px;
   }
-}
+
 
   /* PROYECTOS */
   .projects-grid {
@@ -1177,45 +1189,90 @@ footer::selection {
 /* =====================
    SOBRE MI
 ===================== */
-.about-box {
-  flex-direction: column; /* apilado en móvil */
-  gap: 20px;
-  align-items: center;
-  text-align: center;
+/* Tablets y móviles medianos <=900px */
+@media (max-width: 900px) {
+
+  .about-box {
+    display: flex;
+    flex-direction: row; /* lateralmente */
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .about-left {
+    flex: 0 0 35%; /* tarjeta lateral pequeña */
+    max-width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start; /* lista alineada a la izquierda */
+    text-align: left;
+  }
+
+  .about-left .github-logo {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  .about-highlights, .work-list {
+    list-style: disc;
+    padding-left: 20px;
+    margin: 0;
+  }
+
+  .about-right {
+    flex: 0 0 60%; /* resto del ancho para texto */
+    max-width: 60%;
+    text-align: justify;
+  }
+
+  .about-right p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 12px;
+  }
+
+  .about-cta {
+    text-align: left;
+    margin-top: 15px;
+  }
 }
 
-.about-left, .about-right {
-  width: 100%; /* full width */
-}
+/* Celulares pequeños <=500px */
+@media (max-width: 500px) {
 
-.about-left {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-}
+  .about-box {
+    flex-direction: column; /* apilar solo en pantallas muy chicas */
+    gap: 15px;
+    align-items: center;
+    text-align: center;
+  }
 
-.about-left .github-logo {
-  font-size: 2.2rem;
-  color: #333;
-}
+  .about-left, .about-right {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 
-.about-highlights, .work-list {
-  list-style: none;
-  padding-left: 0;
-}
+  .about-left {
+    align-items: center;
+  }
 
-.about-right p {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin-bottom: 12px;
-}
+  .about-left .github-logo {
+    font-size: 2rem;
+  }
 
-.about-cta {
-  text-align: center;
-  margin-top: 15px;
-}
+  .about-right p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
 
+  .about-cta {
+    text-align: center;
+  }
+}
 /* =====================
    EXPERIENCIA & EDUCACION
 ===================== */
