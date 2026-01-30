@@ -84,7 +84,7 @@
   <div class="projects-grid">
 
     <!-- Proyecto 1 -->
-    <a href="pages/PatitasFelices.html" class="project-card">
+    <div class="project-card">
       <img src="assets/Proyectos/PatitasFelices/Login.png" alt="PatitasFelices">
 
       <div class="project-content">
@@ -100,18 +100,22 @@
           <span class="tech"><i class="fa-brands fa-node-js"></i> Node.js</span>
           <span class="tech"><i class="fa-solid fa-database"></i> MongoDB</span>
         </div>
+
+        <a href="pages/PatitasFelices.html" class="btn-project">
+          Ver detalle →
+        </a>
       </div>
-    </a>
+    </div>
 
     <!-- Proyecto 2 -->
-    <a href="pages/fmj.html" class="project-card">
+    <div class="project-card">
       <img src="assets/Proyectos/FMJ/inicio.png" alt="Plataforma Web Judo">
 
       <div class="project-content">
         <h4>Plataforma Web – Club de Judo</h4>
         <p>
           Plataforma web para clubes y federaciones de judo, con ranking automático,
-          calendario de eventos, torneos y panel de administración privado.
+          calendario de eventos y panel de administración.
         </p>
 
         <div class="tech-tags">
@@ -121,11 +125,16 @@
           <span class="tech"><i class="fa-brands fa-node-js"></i> Node.js</span>
           <span class="tech"><i class="fa-solid fa-database"></i> MongoDB</span>
         </div>
+
+        <a href="pages/fmj.html" class="btn-project">
+          Ver detalle →
+        </a>
       </div>
-    </a>
+    </div>
 
   </div>
 </section>
+
 
 
 
@@ -440,8 +449,18 @@
   © 2026 · Lorenzo Gómez Martins
 </footer>
 
+<div id="whatsapp-component"></div>
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 <script src="scripts/script.js"></script>
+<script src="scripts/components.js"></script>
+<script>
+  loadComponent(
+    '#whatsapp-component',
+    'components/whatsapp.html',
+    'components/whatsapp.css'
+  );
+</script>
+
 
 </body>
 </html>

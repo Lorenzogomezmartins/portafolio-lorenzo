@@ -67,12 +67,10 @@ body {
   padding: 160px 20px 120px;
 }
 
-/* ===============================
-  HERO CONTENT
-================================ */
+/*HERO CONTENT*/
 .hero-content {
   position: relative;
-  z-index: 2; /* contenido arriba de los íconos */
+  z-index: 2; 
   max-width: 1100px;
   margin: auto;
   display: grid;
@@ -81,20 +79,16 @@ body {
   align-items: center;
 }
 
-/* ===============================
-  FOTO
-================================ */
+/*FOTO*/
 .hero-photo img {
   width: 260px;
-  border-radius: 50%; /* 🔹 foto circular */
+  border-radius: 50%; 
   box-shadow: 0 25px 60px rgba(56, 189, 248, 0.25);
-  object-fit: cover; /* asegura que la imagen se recorte bien dentro del círculo */
-  aspect-ratio: 1 / 1; /* mantiene proporción cuadrada para el círculo */
+  object-fit: cover; 
+  aspect-ratio: 1 / 1; 
 }
 
-/* ===============================
-  TEXTO
-================================ */
+/*TEXTO*/
 .hero-text h1 {
   font-size: 3rem;
   color: #f8fafc;
@@ -113,9 +107,7 @@ body {
   color: #cbd5f5;
 }
 
-/* ===============================
-  FLOATING ICONS (FONDO)
-================================ */
+/* FLOATING ICONS (FONDO)*/
 .floating-icons {
   position: absolute;
   inset: 0;
@@ -131,7 +123,7 @@ body {
   animation: float 6s ease-in-out infinite;
 }
 
-/* POSICIONES SEGURAS (9 ICONOS) */
+/* POSICIONES SEGURAS */
 .floating-icons i:nth-child(1) { /* Python */
   top: 12%;
   left: 10%;
@@ -223,14 +215,14 @@ body {
    TARJETAS DE PROYECTO
 ================================= */
 .project-card {
-  display: block;
+  display: flex;
+  flex-direction: column;
   background: linear-gradient(145deg, #0f172a, #020617);
   padding: 30px;
   border-radius: 22px;
   border: 1px solid #1e293b;
-  text-decoration: none;
-  transition: transform 0.4s, box-shadow 0.4s;
   color: inherit;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .project-card:hover {
@@ -244,6 +236,13 @@ body {
   margin-bottom: 20px;
 }
 
+/* Contenido */
+.project-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
 .project-card h4 {
   font-size: 1.4rem;
   color: #f8fafc;
@@ -254,10 +253,12 @@ body {
   color: #94a3b8;
 }
 
+/* Tecnologías */
 .project-card .tech-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  margin-bottom: 20px;
 }
 
 .project-card .tech {
@@ -270,6 +271,31 @@ body {
   gap: 5px;
   color: #38bdf8;
 }
+
+/* ===============================
+   BOTÓN "VER DETALLE"
+================================= */
+.btn-project {
+  align-self: flex-start;
+  margin-top: auto;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #111827, #1f2937);
+  color: #f8fafc;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  border: 1px solid #334155;
+}
+
+.btn-project:hover {
+  background: linear-gradient(135deg, #07848d, #07848d);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.35);
+}
+
 
 
 /* ===============================
@@ -1095,7 +1121,7 @@ footer::selection {
   /* PROJECTS GRID */
   .projects-grid {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 24px;
   }
 
   /* HABILIDADES */
