@@ -445,19 +445,30 @@
 
 
 
-<footer>
-  © 2026 · Lorenzo Gómez Martins
-</footer>
 
+
+<!-- WHATSAPP -->
 <div id="whatsapp-component"></div>
+
+<!-- FOOTER -->
+<div id="footer-component"></div>
+
+<!-- LIBRERÍAS Y SCRIPTS -->
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 <script src="scripts/script.js"></script>
 <script src="scripts/components.js"></script>
+
 <script>
   loadComponent(
     '#whatsapp-component',
     'components/whatsapp.html',
     'components/whatsapp.css'
+  );
+
+  loadComponent(
+    '#footer-component',
+    'components/footer.html',
+    'components/footer.css'
   );
 </script>
 

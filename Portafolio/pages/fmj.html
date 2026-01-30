@@ -7,6 +7,8 @@
 
   <!-- Bootstrap CSS (para carrusel) -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 
   <!-- CSS propio -->
   <link rel="stylesheet" href="../styles/fmj.CSS">
@@ -112,23 +114,37 @@
 
   </main>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p>© 2026 · Lorenzo Gómez Martins</p>
-  </footer>
+
 
 
 <!-- Bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <div id="whatsapp-component"></div>
+<div id="footer-component"></div>
 
+<!-- Components -->
 <script src="../scripts/components.js"></script>
+
 <script>
   loadComponent(
-    "#whatsapp-component",
-    "../components/whatsapp.html",
-    "../components/whatsapp.css"
-  );
+    '#whatsapp-component',
+    '../components/whatsapp.html',
+    '../components/whatsapp.css'
+  ).then(() => {
+    if (window.FontAwesome) {
+      FontAwesome.dom.i2svg();
+    }
+  });
+
+  loadComponent(
+    '#footer-component',
+    '../components/footer.html',
+    '../components/footer.css'
+  ).then(() => {
+    if (window.FontAwesome) {
+      FontAwesome.dom.i2svg();
+    }
+  });
 </script>
 </html>
