@@ -49,15 +49,22 @@ Formulario funcional y enlaces a redes profesionales.
 
   ## 🧱 Estructura del Proyecto
 ```bash
-portfolio/
-├── assets/         # Imágenes, íconos y recursos
-├── pages/          # Páginas del sitio y proyectos
-│   └── index.html
-├── styles/         # Estilos CSS
-├── scripts/        # Lógica JavaScript
-└── README.md       # Documentación del proyecto
+Portafolio/
+├── assets/
+│   ├── Proyectos/        # Capturas y recursos de cada proyecto
+│   └── imagenes/         # Logos e imágenes generales
+│
+├── components/           # Componentes reutilizables (footer, whatsapp, etc.)
+│
+├── pages/                # Páginas individuales de cada proyecto
+│
+├── scripts/              # Lógica JavaScript y carga dinámica de componentes
+│
+├── styles/               # Archivos CSS del portfolio y proyectos
+│
+├── index.html            # Página principal del portfolio
+└── README.md             # Documentación del proyecto
 ```
-
 ---
 Estructura pensada para orden, claridad y mantenibilidad.
 
