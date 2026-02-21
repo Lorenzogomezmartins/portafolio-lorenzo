@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Fuego Burgers · Landing Page | Lorenzo Gómez Martins</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap CSS (para carrusel) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- CSS propio -->
+  <link rel="stylesheet" href="../styles/LandigPages.css">
+
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="project-header">
+    <nav>
+      <a href="../index.html" class="back-link">&larr; Volver a Portfolio</a>
+    </nav>
+    <h3>Landing Page · Fuego Burgers</h3>
+    <p>Diseño moderno y modular para marca gastronómica</p>
+  </header>
+
+  <!-- CARRUSEL -->
+  <div id="carouselLanding" class="carousel slide mb-4" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+      <div class="carousel-item active">
+        <img src="../assets/imagenes/Landing-Page.png" class="carousel-img" alt="Sección Hero">
+      </div>
+
+      <div class="carousel-item">
+        <img src="../assets/Proyectos/LandingPage/Novedades-LandingPages.png" class="carousel-img" alt="Sección Novedades">
+      </div>
+
+      <div class="carousel-item">
+        <img src="../assets/Proyectos/LandingPage/Menu-LandingPages.png" class="carousel-img" alt="Sección Menú">
+      </div>
+
+      <div class="carousel-item">
+        <img src="../assets/Proyectos/LandingPage/Contacto-LandingPages.png" class="carousel-img" alt="Sección Contacto">
+      </div>
+
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselLanding" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselLanding" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+
+  <!-- CONTENIDO -->
+  <main class="project-content container">
+
+    <h2>Descripción General</h2>
+    <p class="project-description">
+      Landing page desarrollada para una hamburguesería urbana con identidad visual fuerte y moderna.
+      El proyecto está construido con arquitectura modular mediante carga dinámica de componentes,
+      scroll animado personalizado y diseño completamente responsive.
+    </p>
+
+    <h2>Tecnologías Utilizadas</h2>
+    <div class="tech-tags">
+      <div class="tech"><i class="fa-brands fa-html5"></i> HTML</div>
+      <div class="tech"><i class="fa-brands fa-css3-alt"></i> CSS</div>
+      <div class="tech"><i class="fa-brands fa-js"></i> JavaScript</div>
+      <div class="tech"><i class="fa-solid fa-code"></i> Fetch API</div>
+      <div class="tech"><i class="fa-brands fa-bootstrap"></i> Bootstrap</div>
+    </div>
+
+    <h2>Funcionalidades Principales</h2>
+    <ul>
+      <li>Navbar fijo con animación de subrayado.</li>
+      <li>Scroll suave con ajuste dinámico por altura del header.</li>
+      <li>Carga modular de secciones (partials).</li>
+      <li>Carrusel interactivo en sección novedades.</li>
+      <li>Diseño responsive adaptable a distintos dispositivos.</li>
+      <li>Botón flotante de WhatsApp.</li>
+    </ul>
+
+    <h2>Secciones de la Landing</h2>
+    <ul>
+      <li>Hero principal con imagen impactante.</li>
+      <li>Sección de novedades con promociones destacadas.</li>
+      <li>Menú visual organizado.</li>
+      <li>Contacto con redes sociales.</li>
+      <li>Footer institucional.</li>
+    </ul>
+
+    <h2>Experiencia de Usuario</h2>
+    <ul>
+      <li>Navegación fluida y moderna.</li>
+      <li>Animaciones suaves y transiciones elegantes.</li>
+      <li>Diseño minimalista con enfoque visual fuerte.</li>
+      <li>Estructura escalable para futuros desarrollos.</li>
+    </ul>
+
+    <h2>Qué Demuestra Este Proyecto</h2>
+    <ul>
+      <li>Organización modular profesional.</li>
+      <li>Manejo de JavaScript para manipulación del DOM.</li>
+      <li>Aplicación de diseño moderno orientado a marca.</li>
+      <li>Buenas prácticas en estructura y separación de archivos.</li>
+    </ul>
+
+  </main>
+
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <div id="whatsapp-component"></div>
+  <div id="footer-component"></div>
+
+  <!-- Components -->
+  <script src="../scripts/components.js"></script>
+
+  <script>
+    loadComponent(
+      '#whatsapp-component',
+      '../components/whatsapp.html',
+      '../components/whatsapp.css'
+    ).then(() => {
+      if (window.FontAwesome) {
+        FontAwesome.dom.i2svg();
+      }
+    });
+
+    loadComponent(
+      '#footer-component',
+      '../components/footer.html',
+      '../components/footer.css'
+    ).then(() => {
+      if (window.FontAwesome) {
+        FontAwesome.dom.i2svg();
+      }
+    });
+  </script>
+
+</body>
+</html>

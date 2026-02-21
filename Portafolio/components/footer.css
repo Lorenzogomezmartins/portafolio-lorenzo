@@ -7,13 +7,16 @@
   padding: 60px 30px 30px;
   margin-top: 80px;
 
-  /* Recuadro destacado */
-  border: 2px solid #38bdf8;      /* borde azul */
-  border-radius: 12px;             /* esquinas redondeadas */
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4); /* sombra */
+  /* Línea divisora superior sutil */
+  border-top: 1px solid #1e293b;
+
+  /* Sombra muy leve para separación visual */
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Grid columnas */
+/* =========================
+   GRID COLUMNAS
+========================= */
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
