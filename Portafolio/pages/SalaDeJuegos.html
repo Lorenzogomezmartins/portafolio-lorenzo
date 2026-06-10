@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Sala de Juegos · Portfolio | Lorenzo Gómez Martins</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap CSS (para carrusel) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- CSS propio -->
+  <link rel="stylesheet" href="../styles/SalaDeJuegos.css">
+
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="project-header">
+    <nav>
+      <a href="../index.html" class="back-link">&larr; Volver a Portfolio</a>
+    </nav>
+    <h3>Sala de Juegos · Aplicación Web Interactiva</h3>
+    <p>Trabajo Práctico N°1 · Programación IV · UTN Avellaneda</p>
+  </header>
+
+  <!-- CARRUSEL -->
+  <div id="carouselSala" class="carousel slide mb-4" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+      <div class="carousel-item active">
+        <img src="../assets/Proyectos/SalaDeJuegos/home.png" class="carousel-img" alt="Home Sala de Juegos">
+      </div>
+
+      <div class="carousel-item">
+        <img src="../assets/Proyectos/SalaDeJuegos/login.png" class="carousel-img" alt="Login Sala de Juegos">
+      </div>
+
+      <div class="carousel-item">
+        <img src="../assets/Proyectos/SalaDeJuegos/ahorcado.jpg" class="carousel-img" alt="Juego Ahorcado">
+      </div>
+
+      <div class="carousel-item">
+        <img src="../assets/Proyectos/SalaDeJuegos/preguntados.jpg" class="carousel-img" alt="Juego Preguntados">
+      </div>
+
+      <div class="carousel-item">
+        <img src="../assets/Proyectos/SalaDeJuegos/mayor-menor.jpg" class="carousel-img" alt="Juego Mayor o Menor">
+      </div>
+
+      <div class="carousel-item">
+        <img src="../assets/Proyectos/SalaDeJuegos/ruleta.jpg" class="carousel-img" alt="Ruleta Casino">
+      </div>
+
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselSala" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselSala" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+
+  <!-- CONTENIDO -->
+  <main class="project-content container">
+
+    <h2>Descripción General</h2>
+    <p class="project-description">
+      Sala de Juegos es una aplicación web desarrollada en Angular como Trabajo Práctico N°1
+      para la materia Programación IV de la UTN Avellaneda. Incluye autenticación,
+      navegación protegida, juegos interactivos, chat en tiempo real, resultados y estadísticas
+      conectadas a Supabase.
+    </p>
+
+    <h2>Tecnologías Utilizadas</h2>
+    <div class="tech-tags">
+      <div class="tech"><i class="fa-brands fa-angular"></i> Angular</div>
+      <div class="tech"><i class="fa-solid fa-code"></i> TypeScript</div>
+      <div class="tech"><i class="fa-brands fa-html5"></i> HTML</div>
+      <div class="tech"><i class="fa-brands fa-css3-alt"></i> CSS</div>
+      <div class="tech"><i class="fa-solid fa-cloud"></i> Supabase</div>
+      <div class="tech"><i class="fa-brands fa-bootstrap"></i> Bootstrap</div>
+    </div>
+
+    <h2>Funcionalidades Principales</h2>
+    <ul>
+      <li>Registro e inicio de sesión con Supabase.</li>
+      <li>Persistencia de usuarios en base de datos.</li>
+      <li>Guards para proteger rutas privadas.</li>
+      <li>Home dinámico según el usuario logueado.</li>
+      <li>Chat en tiempo real con usuario, fecha y diferenciación de mensajes propios.</li>
+      <li>Resultados guardados en Supabase.</li>
+      <li>Tablas de resultados ordenadas por puntaje.</li>
+      <li>Diseño responsive con animaciones y modales personalizados.</li>
+    </ul>
+
+    <h2>Juegos Incluidos</h2>
+    <ul>
+      <li><strong>Ahorcado:</strong> juego clásico de adivinar palabras.</li>
+      <li><strong>Mayor o Menor:</strong> juego de predicción de cartas.</li>
+      <li><strong>Preguntados:</strong> juego de preguntas utilizando una API externa.</li>
+      <li><strong>Ruleta Casino:</strong> juego propio con sistema de fichas y apuestas.</li>
+    </ul>
+
+    <h2>Juego Propio · Ruleta Casino</h2>
+    <p class="project-description">
+      El jugador comienza con 100 fichas y puede apostar a rojo/negro, par/impar
+      o a un número específico. La ruleta genera un número aleatorio entre 0 y 36.
+      El objetivo es llegar a 250 fichas antes de quedarse sin saldo.
+    </p>
+
+    <ul>
+      <li><strong>Ganar:</strong> llegar a 250 fichas.</li>
+      <li><strong>Perder:</strong> quedarse sin fichas.</li>
+      <li><strong>Apuestas:</strong> rojo/negro, par/impar y número específico.</li>
+    </ul>
+
+    <h2>Desarrollo por Sprints</h2>
+
+<div class="sprint-grid">
+
+  <div class="sprint-card">
+    <h4>📚 Sprint 1</h4>
+
+    <ul>
+      <li>Creación del proyecto Angular.</li>
+      <li>Deploy en Vercel.</li>
+      <li>Home / Bienvenida.</li>
+      <li>Página "Quién Soy".</li>
+      <li>Navegación entre componentes.</li>
+      <li>Consumo de API de GitHub.</li>
+      <li>Favicon personalizado.</li>
+    </ul>
+  </div>
+
+  <div class="sprint-card">
+    <h4>🔐 Sprint 2</h4>
+
+    <ul>
+      <li>Login con Supabase.</li>
+      <li>Registro de usuarios.</li>
+      <li>Home dinámico según usuario logueado.</li>
+      <li>Guards de rutas.</li>
+      <li>Login rápido.</li>
+      <li>Persistencia de usuarios en base de datos.</li>
+    </ul>
+  </div>
+
+  <div class="sprint-card">
+    <h4>🎮 Sprint 3</h4>
+
+    <ul>
+      <li>Juego Ahorcado.</li>
+      <li>Juego Mayor o Menor.</li>
+      <li>Chat en tiempo real.</li>
+      <li>Mensajes con usuario y fecha.</li>
+      <li>Resultados guardados en Supabase.</li>
+      <li>Diferenciación de mensajes propios.</li>
+    </ul>
+  </div>
+
+  <div class="sprint-card">
+    <h4>🧠 Sprint 4</h4>
+
+    <ul>
+      <li>Juego Preguntados utilizando API externa.</li>
+      <li>Juego propio: Ruleta Casino.</li>
+      <li>Página de resultados.</li>
+      <li>Tablas ordenadas por puntaje.</li>
+      <li>Animaciones CSS y Angular.</li>
+      <li>Modales personalizados.</li>
+      <li>Diseño responsive.</li>
+    </ul>
+  </div>
+
+</div>
+
+    <h2>Qué Demuestra Este Proyecto</h2>
+    <ul>
+      <li>Manejo de Angular con arquitectura basada en componentes y servicios.</li>
+      <li>Autenticación, guards y protección de rutas.</li>
+      <li>Integración con Supabase para base de datos y tiempo real.</li>
+      <li>Uso de APIs externas.</li>
+      <li>Diseño de lógica de juegos, resultados y estadísticas.</li>
+      <li>Capacidad de desarrollo por sprints e iteraciones.</li>
+    </ul>
+
+    <a href="https://sala-de-juegos-two.vercel.app/"
+      class="btn-github"
+      target="_blank">
+      Ver Deploy &rarr;
+    </a>
+
+  </main>
+
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <div id="whatsapp-component"></div>
+  <div id="footer-component"></div>
+
+  <!-- Components -->
+  <script type="module">
+    import { loadComponent } from "../scripts/components.js";
+
+    loadComponent(
+      "#whatsapp-component",
+      "../components/whatsapp/whatsapp.html",
+      "../components/whatsapp/whatsapp.css"
+    );
+
+    loadComponent(
+      "#footer-component",
+      "../components/footer/footer.html",
+      "../components/footer/footer.css"
+    );
+  </script>
+
+</body>
+</html>

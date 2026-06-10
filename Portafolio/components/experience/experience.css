@@ -1,0 +1,169 @@
+#experiencia {
+  padding: 100px 0;
+}
+
+.trayectoria-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.trayectoria-head {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 50px;
+}
+
+.head-col {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #e5e7eb;
+  position: relative;
+}
+
+.head-col::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  mix-blend-mode: color;
+  pointer-events: none;
+}
+
+.head-col.experiencia {
+  text-align: left;
+  padding-right: 50px;
+}
+
+.head-col.educacion {
+  padding-left: 50px;
+}
+
+.trayectoria-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 90px;
+  position: relative;
+}
+
+.trayectoria-grid::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    #38bdf8,
+    rgba(56, 189, 248, 0.25),
+    transparent
+  );
+}
+
+.trayectoria-grid::after {
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    #38bdf8,
+    rgba(56, 189, 248, 0.15),
+    transparent
+  );
+}
+
+.trayectoria-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+}
+
+.trayectoria-col {
+  position: relative;
+}
+
+.trayectoria-date {
+  display: block;
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin-bottom: 12px;
+}
+
+.trayectoria-card {
+  background: linear-gradient(145deg, #0f172a, #020617);
+  border: 1px solid #1e293b;
+  padding: 22px 24px;
+  border-radius: 18px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trayectoria-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(56, 189, 248, 0.12);
+}
+
+.trayectoria-card h5 {
+  font-size: 1.05rem;
+  color: #f8fafc;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.trayectoria-card span {
+  display: block;
+  font-size: 0.85rem;
+  color: #7dd3fc;
+  margin-bottom: 10px;
+}
+
+.trayectoria-card p {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: #cbd5f5;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  #experiencia {
+    padding: 80px 20px;
+  }
+
+  .trayectoria-head {
+    display: none;
+  }
+
+  .trayectoria-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    padding-left: 25px;
+  }
+
+  .trayectoria-grid::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    height: 100%;
+    transform: none;
+    background-color: #ccc;
+    border-radius: 2px;
+  }
+
+  .trayectoria-grid::after {
+    display: none;
+  }
+
+  .trayectoria-row {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    padding: 20px;
+  }
+}

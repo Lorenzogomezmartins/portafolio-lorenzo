@@ -1,0 +1,111 @@
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 35px;
+}
+
+.service-card {
+  background: linear-gradient(145deg, #0f172a, #020617);
+  border: 1px solid #1e293b;
+  padding: 30px;
+  border-radius: 22px;
+  text-align: center;
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.service-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 60px rgba(56, 189, 248, .2);
+}
+
+.service-card i {
+  font-size: 38px;
+  color: #38bdf8;
+  margin-bottom: 15px;
+}
+
+.service-card h4 {
+  color: #f8fafc;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  color: #cbd5f5;
+  line-height: 1.6;
+}
+
+.cv-buttons {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.btn-cv {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 30px;
+  border-radius: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #f8fafc;
+  background: linear-gradient(135deg, #1e40af, #020617);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  box-shadow:
+    0 0 0 rgba(56, 189, 248, 0),
+    0 12px 30px rgba(2, 6, 23, 0.8);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.btn-cv::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    135deg,
+    rgba(56, 189, 248, 0.45),
+    rgba(30, 64, 175, 0.15)
+  );
+  opacity: 0;
+  filter: blur(14px);
+  z-index: -1;
+  transition: opacity 0.35s ease;
+}
+
+.btn-cv:hover {
+  transform: translateY(-4px);
+  border-color: #38bdf8;
+  box-shadow:
+    0 0 22px rgba(56, 189, 248, 0.35),
+    0 20px 45px rgba(2, 6, 23, 0.9);
+}
+
+.btn-cv:hover::before {
+  opacity: 1;
+}
+
+.btn-cv.secondary {
+  background: linear-gradient(135deg, #0f172a, #020617);
+  border-color: rgba(148, 163, 184, 0.35);
+}
+
+.btn-cv.secondary:hover {
+  border-color: #7dd3fc;
+  box-shadow:
+    0 0 18px rgba(125, 211, 252, 0.25),
+    0 18px 40px rgba(2, 6, 23, 0.85);
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+}
